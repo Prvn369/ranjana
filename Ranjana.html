@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranjana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #9195F6;
+        }
+
+        #loveMessage {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+   
+
+    <script>
+        // JavaScript code
+        function generateLoveMessage() {
+            var userName = prompt("Enter Your Name:");
+
+            if (userName) {
+                var loveMessage = "";
+                for (var i = 0; i < 1000; i++) {
+                    loveMessage += userName + ", I Love You!  ";
+                }
+                document.getElementById("loveMessage").textContent = loveMessage; // Remove the trailing comma and space
+            } else {
+                alert("No name entered. Love message generation canceled.");
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = generateLoveMessage;
+    </script>
+
+    <h2 id="loveMessage"></h2>
+</body>
+</html>
